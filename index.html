@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络推广工具箱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- UTM链接生成器 -->
+        <div class="tool-card">
+            <h2>🔗 UTM链接生成器</h2>
+            <div class="input-group">
+                <input type="url" id="baseUrl" placeholder="基础URL (例: https://example.com)">
+                <input type="text" id="campaign" placeholder="活动名称 (必填)">
+                <input type="text" id="source" placeholder="来源 (例: wechat)">
+                <input type="text" id="medium" placeholder="媒介 (例: banner)">
+                <button onclick="generateUTM()">生成链接</button>
+            </div>
+            <div id="utmResult" class="result-box"></div>
+        </div>
+
+        <!-- SEO检查工具 -->
+        <div class="tool-card">
+            <h2>🔍 页面SEO检查</h2>
+            <button onclick="checkSEO()">扫描当前页面</button>
+            <div id="seoResult" class="result-box"></div>
+        </div>
+
+        <!-- 社交媒体快捷生成 -->
+        <div class="tool-card">
+            <h2>📱 社交媒体分享</h2>
+            <div class="social-buttons">
+                <button class="weibo" onclick="shareTo('weibo')">微博</button>
+                <button class="wechat" onclick="shareTo('wechat')">微信</button>
+                <button class="douyin" onclick="shareTo('douyin')">抖音</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
